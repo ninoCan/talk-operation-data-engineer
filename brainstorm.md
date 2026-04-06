@@ -19,10 +19,10 @@
 
 ### Key Commitments (must deliver on these)
 
-1. **Introduce the wide-table problem**: Show audience the mess they've likely encountered — one big denormalized table hiding multiple entities, metrics, time semantics, and technical noise.
+1. **Introduce the one-big-table problem**: Show audience the mess they've likely encountered — one big denormalized table hiding multiple entities, metrics, time semantics, and technical noise.
 2. **Deliver the dissection framework**: Classify columns into functional roles — keys, dimensions, facts, temporal granularities, technical columns, aggregates, indices. This is the core content promise.
 3. **Make normalization feel achievable**: Show that with the framework, normalization is surgical precision (deliberate, reversible), not a risky rewrite.
-4. **Python-stack relevance**: Frame it for Python-based data stacks and real-world messy schemas.
+4. **Python-stack relevance**: Frame it for Python-based data stacks (such as pyspark, but also pandas, polars...) and real-world messy schemas.
 
 ### Tone/Approach
 
@@ -42,34 +42,32 @@ Storytelling-first: lead with a relatable scenario ("you get a giant wide table,
 
 1. **Title slide**
 2. **About me** — who am I, what do I do
-3. **The story hook**: Your task as a Big Data Engineer — create one big table (CBTs: Column-Based Tables). Ask the audience: how many of you have faced this?
+3. **The story hook**: Your task as a Big Data Engineer — create one big table (OBT). Ask the audience: how many of you have faced this?
 4. **Show a wide table**: 90+ columns in denormalized form
-5. **The uncomfortable truth**: To feed dashboards and stakeholders, you don't *have* to JOIN — wide tables work. But they hide things.
+5. **The uncomfortable truth**: To feed dashboards and stakeholders, they don't *have* to JOIN — OBT work. Yet, they can be tricky to build.
 
 #### ACT 2 — Understanding the Beast
 
 6. **DON'T PANIC** — let's take a step back and break down the problem
-7. **1NF & entities**: 1NF tables often contain many entities. Horizontal redundancy is OK — but denormalization hides data and can generate duplicates.
-8. **Tables are leaky abstractions**: A design doesn't want to imply complexity, but fails to hide it completely. Should show relations between entities, but requires extra work (indices, normalization, querying) to optimize.
+7. **OBT & entities**: OBTs often contain many entities. Horizontal redundancy is OK — but denormalization can hide data and generate duplicates.
+8. **Tables are leaky abstractions**: A design purported to handle complexity, but fails to make things simpler and has pitfalls. Should show relations between entities, but requires extra work (indices, normalization, querying) to optimize.
 9. **OLTP vs OLAP**:
    - OLTP captures transactions: write-optimized, produces well-normalized tables, almost 1:1 with objects
    - OLAP captures analytics: read-optimized, aggregates data, often denormalizes entities
-   - CBTs sit in the middle of the DATA JOURNEY
 
 #### ACT 3 — The Dissection Framework
 
 10. **Columns are not all the same** — the core thesis:
     - **Dimensions**: describe attributes of an entity (subject to evolution over time); composite and business dimensions exist
+    - **Primary Keys**: Business K., Candidate K., Composite Ks, Surrogate K. 
     - **Measures / Facts**: represent point-in-time metrics of an entity
     - **Technical Fields**: metadata or non-business attributes that support operations
     - **Temporal**: granularities — dimensions are the foundation, with a single row per unique granularity
     - **Aggregations**: integrate facts over dimensions together, reducing normality
-    - **Indices**: (inferred from framework)
-    - **Keys**: PKs, FKs — define relationships and directionality
 
-11. **The DATA JOURNEY** — typically:
-    - Input: RDBMS & Time Series
-    - If upstream datasets are denormalized → re-modelling is a good starting point
+11. **The DATA JOURNEY** — OBT is the outcome, no need to be created from scratch. Typically:
+    - Input: ERD modeling & Time Series
+    - If upstream datasets are denormalized → re-normalization is a good starting point
     - Create a star/fact with dimensional layer: Fact & Dimension Tables → Star / Snowflake / Data Vault / Anchor modeling
 
 12. **ERDs define an ontology/taxonomy**:
@@ -79,12 +77,12 @@ Storytelling-first: lead with a relatable scenario ("you get a giant wide table,
 
 13. **Normalization reduces redundancy**:
     - 1NF: each column holds a single value, no duplicate rows
-    - 2NF: each non-key attribute depends on the entire PK (composite or surrogate?)
-    - Guarantees safety from insertion and deletion anomalies
+    - 2NF: each non-key attribute depends on the entire PK (no need to split tables, move composite keys to a surrogate key?)
+    - This should guarantees safety from insertion and deletion anomalies
 
 #### ACT 4 — Star/Snowflake Modeling (Applied Framework)
 
-14. **Star/Snowflake focus** (most common starting point):
+14. **Star/Snowflake focus** (most common modeling):
     - **Dimension tables**: describe actors and their attributes (e.g., Customers, Products)
     - **Fact tables**: describe events involving actors (e.g., Purchases, Sales)
     - Often only Facts sit between Dimensions (Star), but Dimensions can connect multiple Facts (Snowflake)
@@ -94,28 +92,31 @@ Storytelling-first: lead with a relatable scenario ("you get a giant wide table,
     - one-to-many (1→n)
 
 16. **PITFALL — M:N relationships are poorly modeled in RDBMS**:
-    - Introduce "association tables" / "bridge tables" to reduce M:N to (1→n) & (n→1)
+    - Introduce "association tables" / "bridges" to reduce M:N to (1→n) & (n→1)
     - Bridges contain overlapping PKs from both tables as FKs → composite key
 
 #### ACT 5 — Then We JOIN... and Things Go South
 
 17. **JOIN anomalies** (the crux of the practical problem):
-    - FK/PK JOINs can cause data loss when PK/FK is NULL
-    - Full/Left/Right JOINs can explode rows on one side or the other
+    - Inner/Left/Right JOINs can cause data loss when PK/FK is NULL
+    - Full Outer JOINs can explode rows on one side or the other
     - Joining two tables loses the *directionality* of the relationship between entities
 
-18. **The wide-table performance trap**:
-    - Fun fact: "easy-to-use" wide tables deplete 5x+ resource overhead
-    - Dimension tables (top-tier) are the third way — synthetic explosion when denormalizing
-    - A table can have n+1 relations; additional ones form loops (hard to JOIN)
-
-19. **UNION BRIDGES comes to the rescue**:
-    - Solve the problem because they are meant to duplicate
+18. **UNION BRIDGES comes to the rescue**:
+    - JOINS put columns next to each others while UNION ALL puts underneath each other.
+    - Solve the problem because they are immune to duplicates
+    - Build a Union Bridge, join other tables to it
     - Bridges come to solve what JOINs can't
+
+19. **3 problems** solved:
+    - FAN TRAP: one (or more) fact table with a many-to-one relation to another. Example: Sales (FK) >---+ (PK) Products 
+    - CHASM TRAP: two dimension tables with a many-to-one relation to a third table. Example: Skills (FK) >---+ (PK) Users +---< (FK) Languages 
+    - LOOPS: given n tables there can be at most n-1 relations without them forming a loop
+
 
 #### ACT 6 — Closing
 
-20. **Bonus: anti-Fact models & non-confirmed granularities** (Target & Rules)
+20. **Bonus: anti-Fact models & non-conformed granularities** (Target & Rules)
 21. **Take-aways**
 22. **Acknowledgements**
 
@@ -125,26 +126,29 @@ Storytelling-first: lead with a relatable scenario ("you get a giant wide table,
 
 ### Core Themes
 
-1. **Wide tables are hiding something**: They look simple but conceal multiple entities, metrics, time semantics, and technical noise. The audience's frustration is valid — it's not obvious chaos, it's hidden complexity.
+1. **One-big tables look simple**: but conceal multiple entities, metrics, time semantics, and technical noise.
+    The frustration is valid — it's not obvious chaos, it's hidden complexity.
 
-2. **Column classification is the unlock**: Once you know what each column *is* (dimension, fact, key, temporal, technical, aggregate), the table stops being a mystery. You gain a shared vocabulary and a surgical map.
+2. **Column classification is the first-step**: Once you know what each column *is* (dimension, fact, key, temporal, technical, aggregate), the table stops being a mystery. You gain a shared vocabulary and a surgical map.
 
-3. **The data journey is the context**: CBTs don't exist in isolation — they sit on a journey from OLTP to OLAP. Understanding where your table lives on that journey helps you decide what to do with it.
+3. **The data journey is the context**: OBTs don't exist in isolation — they sit on a journey from OLTP to OLAP.
+    Understanding where your table lives on that journey helps you decide what to do with it.
 
 4. **Normalization is surgery, not demolition**: With the framework, you can identify exactly which columns belong to which entity, how they relate, and what the safe refactoring path looks like. No more risky big-bang rewrites.
 
-5. **JOINs have traps**: Even after dissection, JOINs are dangerous — NULL FKs, row explosion, lost directionality. UNION BRIDGES offer a path forward.
+5. **JOINs have traps**: Even after dissection, JOINs are dangerous — NULL FKs, row explosion, lost directionality.
+    UNION BRIDGES offer a path forward.
 
 ### Key Messages (What Audience Should Remember)
 
-**Primary message**: Every wide table has a hidden schema — learning to read it transforms you from a data consumer into a data engineer.
+**Primary message**: Every one-big table has a hidden schema — learning to read it is part and parcel of a data engineer.
 
 **Supporting messages**:
 1. Classify columns before you touch them (the 7-role framework)
-2. Star/Snowflake modeling is your map from denormalized chaos to structure
-3. JOINs are lossy — design your bridge tables to preserve directionality
+2. JOINs are lossy — design your bridge tables to preserve directionality
+3. Intermediate modeling is the proper way to build a denormalized structure that does not create troubles
 
-**Call to action**: Next time you open a wide table, don't scroll through columns in despair — pick up your scalpel.
+**Call to action**: Next time you open a OBT, don't scroll through columns in despair — pick up your scalpel.
 
 ---
 
@@ -160,7 +164,7 @@ Storytelling-first: lead with a relatable scenario ("you get a giant wide table,
   - Type: Mermaid / Excalidraw
   - Why: Reference card for the framework
 
-- **OLTP → CBT → OLAP journey**: A left-to-right flow showing where wide tables fit
+- **OLTP → OLAP journey**: A left-to-right flow showing where wide tables fit
   - Type: Mermaid flowchart
   - Why: Contextualizes the problem in the data pipeline
 
@@ -181,7 +185,7 @@ Storytelling-first: lead with a relatable scenario ("you get a giant wide table,
 ## Rough Structure Ideas
 
 **Opening** (~4 slides):
-- Hook: "You inherit a 90-column table. What do you do?" — relatable anxiety
+- Hook: "You have to build a many-columns, **denormalized** table. What do you do?" — relatable anxiety
 - Audience poll: how many of you have seen this?
 - Show the table — overwhelming, flat, no obvious structure
 - The uncomfortable truth: it works for dashboards, but it's hiding something
