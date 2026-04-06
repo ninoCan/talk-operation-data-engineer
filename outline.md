@@ -20,7 +20,7 @@
 - Keep it tight — one slide, ~30 words
 
 ### Slide 3 [C]: The task
-- Story hook: "You're a data engineer. Your stakeholders need a report — fast. Your manager says: build a One Big Table."
+- Story hook: "You're a data engineer. Your stakeholders need a report — fast. Management says: build a One Big Table."
 - Audience prompt: "Raise your hand if you've been here."
 - Introduce the term **OBT** (One Big Table)
 
@@ -31,7 +31,7 @@
 
 ### Slide 5 [C]: The uncomfortable truth
 - OBTs work. Stakeholders are happy. No JOINs needed.
-- But: they're tricky to build correctly, and they're hiding something
+- But: they're tricky to build correctly, with denormalized tables it's easy to lose or miscount
 - Setup the tension: what is hiding inside?
 
 ### Slide 6 [B]: DON'T PANIC
@@ -43,17 +43,17 @@
 ## Section A — Why OBTs Exist (3 slides, ~2.5 min)
 
 ### Slide 7 [C]: OBTs and entities
-- OBTs in 1NF often contain many entities mixed together
+- OBTs often contain many entities mixed together in the same row
 - Horizontal redundancy is OK — but denormalization can hide data and silently generate duplicates
 - Key insight: the table isn't wrong, it's opaque
 
 ### Slide 8 [C]: Tables are leaky abstractions
-- A table is supposed to simplify, but it exposes the underlying complexity anyway — and adds traps
+- A table is supposed to simplify, but it exposes us to new complexity anyway — and adds traps
 - To optimize: indices, normalization, query patterns all leak through
 - Visual: simple analogy diagram (abstraction layer that's not fully hiding what's below)
 
 ### Slide 9 [C]: The data journey
-- OLTP → Dimensional Modeling → OBT → OLAP
+There are two systems at play:
 - OLTP: write-optimized, normalized, 1:1 with objects
 - OLAP: read-optimized, aggregated, denormalized
 - OBT is an *outcome* of the journey — you don't build it from scratch, you arrive at it
@@ -93,7 +93,7 @@
 
 ### Slide 14 [C]: Facts & Temporal granularities
 - **Facts/Measures**: point-in-time numeric metrics of an entity (e.g., `revenue`, `quantity`)
-- **Temporal**: define the time grain — "one row per unique granularity"
+- **Temporal**: define the time grain — in OLTP "one row per unique granularity", in OLAP "multiple time granularities are possible" (think of weekly, monthly, quarterly sales)
 - Together they define *what happened, when*
 - Color: orange (facts), purple (temporal) — highlight in OBT grid
 
@@ -117,16 +117,23 @@
 
 ---
 
-## Section C — Modeling (4 slides, ~3.3 min)
+## Section C — Modeling (5 slides, ~3.8 min)
 
-### Slide 18 [C]: ERDs & ontology
+### Slide 18 [B]: Sneak peek
+- You'll have ERD-modelled datasets, Time-series and/or other data mart 
+- If the upstream datasets are denormalized, re-normalizing could be a good starting point
+- Compose your own data model (eg Star, Snowflake, Data Vault, Anchor) 
+- Bring them together in the OBT
+
+
+### Slide 19 [C]: ERDs & ontology
 - ERDs define the ontology/taxonomy of your data
 - Directionality: PK → FK tells you who owns the relationship
 - Time-series tables typically use composite keys (entity + timestamp)
 - These tables describe the evolution of a single entity over time
 - Visual: minimal ERD (Mermaid)
 
-### Slide 19 [C]: Normalization
+### Slide 20 [C]: Normalization
 - Normalization reduces redundancy → reduces inconsistency risk
 - **1NF**: each column holds a single atomic value; no duplicate rows
 - **2NF**: every non-key attribute depends on the *entire* PK
@@ -134,14 +141,14 @@
 - Benefit: protection from insertion and deletion anomalies
 - **Frame it as surgery**: "This isn't a big-bang rewrite — it's a precise incision. Your dissection map tells you exactly where to cut."
 
-### Slide 20 [C]: Star schema
+### Slide 21 [C]: Star schema
 - The most common modeling target for OBT dissection
 - **Dimension tables**: describe actors and their attributes (e.g., Customers, Products)
 - **Fact tables**: describe events involving actors (e.g., Purchases, Sales)
 - Facts sit between Dimensions; Dimensions can connect multiple Facts (Snowflake variant)
 - Visual: classic star diagram (Mermaid graph)
 
-### Slide 21 [C]: Cardinality & M:N pitfall
+### Slide 22 [C]: Cardinality & M:N pitfall
 - Cardinality: 1→1, 1→n — straightforward in RDBMS
 - **M:N is a pitfall**: poorly modeled directly in relational databases
 - Solution: **Bridge tables** (association tables) — reduce M:N to two 1→n relationships
@@ -152,7 +159,7 @@
 
 ## Breaker
 
-### Slide 22 [B]: And then... we JOIN
+### Slide 23 [B]: And then... we JOIN
 - Humor beat: "Everything looks great. Time to JOIN."
 - Sets up the tension drop before the traps section
 
@@ -160,26 +167,26 @@
 
 ## Section D — JOIN Traps & Resolution (4 slides, ~3.3 min)
 
-### Slide 23 [C]: JOIN anomalies
+### Slide 24 [C]: JOIN anomalies
 - JOINs are lossy by design — they destroy relationship directionality
 - **NULL FK/PK**: inner joins silently drop rows; outer joins may explode them
 - **Row explosion**: Full Outer JOIN on unmatched keys multiplies rows unexpectedly
 - Rule: always understand your cardinality before you JOIN
 
-### Slide 24 [C]: FAN TRAP & CHASM TRAP
+### Slide 25 [C]: FAN TRAP & CHASM TRAP
 - **FAN TRAP**: one (or more) Fact tables with a many-to-one relation to another — facts get fanned out and double-counted
   - Example: `Sales (FK) >---+ (PK) Products`
 - **CHASM TRAP**: two Dimension tables with a many-to-one relation to a shared third table — rows vanish when outer records have no match on both sides
   - Example: `Skills (FK) >---+ (PK) Users +---< (FK) Languages`
 - Visual: ER diagram showing both traps (Mermaid)
 
-### Slide 25 [C]: LOOPS
+### Slide 26 [C]: LOOPS
 - Given n tables, at most n−1 relationships can exist without forming a loop
 - Loops in JOIN chains create ambiguous paths — SQL engines resolve them unpredictably
 - Often introduced silently when building OBTs with n+1 relations
 - Hard to detect without mapping the full graph first
 
-### Slide 26 [C]: UNION BRIDGES to the rescue
+### Slide 27 [C]: UNION BRIDGES to the rescue
 - Key insight: JOIN puts columns side-by-side; UNION ALL stacks rows underneath each other
 - **UNION BRIDGES**: build a bridge table with UNION ALL, then JOIN other tables to it
 - Immune to duplicate explosion; preserves directionality
@@ -190,7 +197,7 @@
 
 ## Closing (2 slides, ~1.7 min)
 
-### Slide 27 [C]: The cheat sheet
+### Slide 28 [C]: The cheat sheet
 - The fully labeled color-coded OBT one more time
 - Three takeaways overlaid:
   1. Classify before you touch (6 roles)
@@ -199,7 +206,7 @@
 - Bonus mention: anti-Fact models & non-conformed granularities exist for edge cases
 - This slide is meant to be screenshot-able
 
-### Slide 28 [C]: Thank you
+### Slide 29 [C]: Thank you
 - Key CTA: "Next time you open an OBT — don't scroll in despair. Pick up your scalpel."
 - Links / QR code for further reading
 - Acknowledgements
@@ -213,7 +220,7 @@
 - Slides 1–6 → Sec A: tension established ("what's hiding inside?")
 - Sec A → Sec B (slide 10): pivot from "why" to "how to see it"
 - Sec B → Sec C (slide 17): pivot from "seeing" to "doing"
-- Sec C → Sec D (slide 22): humor beat before the trap reveal
+- Sec C → Sec D (slide 23): humor beat before the trap reveal
 - Sec D → Closing: resolution — the framework works, here's your map
 
 **Visual inventory:**
@@ -253,7 +260,7 @@
 - Addresses the Python-stack audience directly
 - Good for Q&A on "how do I actually do this?"
 
-### Backup 2: Anti-Fact models & non-conformed granularities
+### Backup 2: Multifacts, Anti-Fact models & non-conformed granularities
 - Expanded version of the "bonus mention" on slide 27
 - Anti-Fact: records absence of an event (e.g., no purchase made)
 - Non-conformed granularities: when Fact tables use incompatible time grains
