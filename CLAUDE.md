@@ -21,7 +21,7 @@ pnpm export        # Export slides to PDF/images
 
 - `slides.md` — The entire presentation deck. Slides are separated by `---` frontmatter blocks. Slide-level config (transitions, layouts) goes in each block's frontmatter.
 - `mindmap.excalidraw.svg` — Starting reference for the talk's narrative structure. Use it to understand topic flow; it is not a strict constraint.
-- `pages/` — Modular slide files imported into `slides.md` via `src: ./pages/<file>.md`. Use for logically distinct sections (e.g., a chapter of the talk) to keep `slides.md` navigable. New sections should default to a separate page file unless trivially short.
+- `slides/` — Modular slide files imported into `slides.md` via `src: ./pages/<file>.md`. Use for logically distinct sections (e.g., a chapter of the talk) to keep `slides.md` navigable. New sections should default to a separate page file unless trivially short.
 - `components/` — Custom Vue components usable directly in slides via their filename (e.g., `<Counter />`).
 - `snippets/` — External code files embeddable with `<<< @/snippets/file.ts` syntax.
 - `proposals/` — **Read-only.** Talk proposals submitted to and accepted by conference steering committees. Use as authoritative context for title, abstract, key messages, and scope. Do not modify.
