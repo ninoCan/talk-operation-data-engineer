@@ -3,7 +3,7 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+background: https://cdn.jsdelivr.net/gh/slidevjs/slidev-covers@main/static/VLaKsTkmVhk.webp
 # some information about your slides (markdown enabled)
 title: "Master the Art of Schema Dissection: Operation Data Engineer"
 info: |
