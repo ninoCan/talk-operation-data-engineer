@@ -66,7 +66,31 @@ src: ./slides/section-a-the-data-journey.md
 ---
 
 ---
-src: ./slides/section-b-dissection-framework.md
+src: ./slides/section-b-the-dissection.md
+---
+
+---
+src: ./slides/section-b-the-gray-table.md
+---
+
+---
+src: ./slides/section-b-primary-keys.md
+---
+
+---
+src: ./slides/section-b-dimensions.md
+---
+
+---
+src: ./slides/section-b-measures-and-time-grains.md
+---
+
+---
+src: ./slides/section-b-tech-fields-and-aggregates.md
+---
+
+---
+src: ./slides/section-b-full-colour.md
 ---
 
 ---
