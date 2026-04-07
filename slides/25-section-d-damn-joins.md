@@ -4,13 +4,17 @@ class: text-center
 ---
 
 
-# JOINs are lossy — they destroy relationship directionality
+# JOINs are tricky
 
-- **INNER JOIN + NULL FK/PK**: rows silently disappear
-- **OUTER JOIN**: row count explodes unexpectedly
-- **All JOINs**: the PK → FK direction is gone from the result
+<div style="text-align: left">
 
-Rule: **know your cardinality before you JOIN**.
+#### **INNER/LEFT/RIGHT JOIN** can both:
+- lose records when one between the FK or PK is absent `-> missing data`
+- explode rows when modelling n-m relationships `-> duplicates`
+#### **OUTER JOIN**: can mitigate these problems but...
+#### **All JOINs**: erase the PK → FK direction from the result
+
+</div>
 
 <!--
 Here's the painful truth about JOINs: they're lossy.

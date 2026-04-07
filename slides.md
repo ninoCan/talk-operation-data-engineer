@@ -130,19 +130,7 @@ src: ./slides/25-section-d-damn-joins.md
 ---
 
 ---
-src: ./slides/26-section-d-fan-trap.md
----
-
----
-src: ./slides/27-section-d-chasm-trap.md
----
-
----
-src: ./slides/28-section-d-loops.md
----
-
----
-src: ./slides/29-section-d-union-bridges.md
+src: ./slides/26-section-d-union-bridges.md
 ---
 
 ---
@@ -151,6 +139,18 @@ src: ./slides/30-morale.md
 
 ---
 src: ./slides/31-closing.md
+---
+
+---
+src: ./slides/27-section-d-fan-trap.md
+---
+
+---
+src: ./slides/28-section-d-chasm-trap.md
+---
+
+---
+src: ./slides/29-section-d-loops.md
 ---
 
 ---

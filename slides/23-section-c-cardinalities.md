@@ -4,16 +4,15 @@ class: text-center
 ---
 
 
-# M:N relationships need a bridge — not a direct join
+# Know the numbers
 
-```mermaid
-erDiagram
-    STUDENT }o--o{ COURSE : "M:N — problematic"
-    STUDENT ||--o{ ENROLLMENT : "1:n — OK"
-    ENROLLMENT }o--|| COURSE : "n:1 — OK"
-```
+<div style="height: 30vh; overflow: hidden; display: flex; justify-content: center;">
+  <img src="../assets/cardinalities.png" style="mix-blend-mode: multiply;">
+</div>
 
-Bridge contains: `student_id` (FK) + `course_id` (FK) → composite PK
+### M-N relationship are not well-behaved in the relational model:
+
+**Association Table/Bridge** contains PK & FK forming a composite key `->` can surrogate
 
 <!--
 Cardinality tells you how entities relate.

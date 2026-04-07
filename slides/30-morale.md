@@ -2,7 +2,7 @@
 layout: center
 ---
 
-# The dissection framework — your new lens
+# The dissection framework: your new lens 🤓
 
 <!-- TODO: Visual - HIGH PRIORITY
 Type: Excalidraw (assets/table.excalidraw — fully labeled cheat sheet version)
@@ -11,11 +11,9 @@ Keys: blue · Dimensions: green · Facts: orange · Temporal: purple · Technica
 Make it clean, legible, screenshot-worthy — this is the takeaway slide.
 -->
 
-1. **Classify** before you touch — 6 roles, no exceptions
-2. **Model** with Star/Snowflake — let the dissection guide the structure
-3. **Bridge** instead of JOIN when directionality matters
-
-*Bonus: Anti-Fact models handle absence of events — ask me in Q&A.*
+1. **Classify** before you touch —> 6 roles
+2. **Model** with Star/Snowflake —> let the dissection guide the structure
+3. **Bridge** before *JOIN* to preserve proper cardinality & hierarchy
 
 <!--
 Here's your cheat sheet.
