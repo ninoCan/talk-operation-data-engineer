@@ -94,11 +94,55 @@ src: ./slides/section-b-full-colour.md
 ---
 
 ---
-src: ./slides/section-c-modeling.md
+src: ./slides/section-c-now-what.md
 ---
 
 ---
-src: ./slides/section-d-join-traps.md
+src: ./slides/section-c-action-plan.md
+---
+
+---
+src: ./slides/section-c-ERDs-graph.md
+---
+
+---
+src: ./slides/section-c-normalization.md
+---
+
+---
+src: ./slides/section-c-dimensional-modelling.md
+---
+
+---
+src: ./slides/section-c-cardinalities.md
+---
+
+---
+src: ./slides/section-d-and-now-join.md
+---
+
+---
+src: ./slides/section-d-damn-joins.md
+---
+
+---
+src: ./slides/section-d-fan-trap.md
+---
+
+---
+src: ./slides/section-d-chasm-trap.md
+---
+
+---
+src: ./slides/section-d-loops.md
+---
+
+---
+src: ./slides/section-d-union-bridges.md
+---
+
+---
+src: ./slides/morale.md
 ---
 
 ---

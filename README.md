@@ -32,4 +32,5 @@ Use `mactex` to produce the slides. On Mac, run `brew install --cask mactex-no-g
 
 - Blog [Unified Star Schema to model Data Products](https://www.agilelab.it/blog/unified-star-schema-to-model-data-products) by _Paolo Platter_
 - Book [The Unified Star Schema](https://technicspub.com/uss/) by _Bill Inmon_ and _Francesco Puppini_
+- Wiki [Data Engineering Wiki](https://dataengineering.wiki)
 - YouTube channel [Decomplexify](www.youtube.com/@decomplexify)

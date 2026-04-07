@@ -23,7 +23,7 @@ class: text-center
 
 <v-click>
 <h2>OBTs work!</h2>
-<h3>Yet, they are <strong>easy to mess up</strong>.</h3>
+<h3>Yet, they are <strong>easy to mess up</strong>...</h3>
 </v-click>
 
 <!--
