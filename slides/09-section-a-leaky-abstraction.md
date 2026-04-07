@@ -1,17 +1,17 @@
 ---
+layout: center
 class: text-center
 ---
 
 # Tables are Leaky Abstractions
+
 ## Tables promise simplicity... yet, complexity leaks through
 
-Designed to expose patterns, they hide structure
+🔎 Designed to expose patterns, but hide structure
 
-- **Indices** to design and maintain
-- **Query patterns** to optimize
-- **Normalization** decisions that come back later
+📐 Naive modeling choices generate extra work later (`normalization`, `CDC`, ...)
 
-> Like a pandas DataFrame that silently hits memory limits — the execution model always leaks through.
+🤸‍♀️ Extra gymnastics to optimize (`Indices`, `sharding`, ...)
 
 <!-- TODO: Visual - MEDIUM PRIORITY
 Type: Simple diagram — abstraction layer with arrows "leaking" through it

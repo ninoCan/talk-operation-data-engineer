@@ -3,17 +3,13 @@ layout: center
 class: text-center
 ---
 
-# ERDs define the ontology — the taxonomy of your data
+<div style="height: 30vh;overflow: hidden; display: flex; justify-content: center;">
+  <img src="../assets/ERD.png" style="scale: 130%; clip-path: inset(29px 20px 10px 20px);">
+</div>
 
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ ORDER_ITEM : contains
-    PRODUCT ||--o{ ORDER_ITEM : "included-in"
-```
+# ERDs define the ontology of your data
 
-- **PK → FK** defines directionality — who owns the relationship
-- Time-series: composite key (entity ID + timestamp)
+**PK → FK** defines directionality of who owns the relationship
 
 <!--
 Entity-Relationship Diagrams are more than technical documentation — they're the ontology of your data.

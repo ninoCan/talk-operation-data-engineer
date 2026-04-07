@@ -6,13 +6,13 @@ transition: none
 
 <img src="../assets/table-dimensions.png" class="table-reveal">
 
-# Dimensions describe the state of an entity over time
+# Dimensions *describe the attributes*
 
-- Attributes of an entity — the **who** and the **what**
-- Subject to change: Slowly Changing Dimensions (SCD)
-- Types: **simple** (flat value) · **composite** (multi-field) · **business** (carries domain meaning)
+Attributes of an entity: the **who** and the **what**
 
-*Examples: `customer_country`, `product_category`, `channel_name`*
+Subject to change: Slowly Changing Dimensions (SCD)
+
+*Examples: `customer_country`, `product_category`, `phone_number`*
 
 <!-- TODO: Visual - HIGH PRIORITY
 Type: Excalidraw (assets/table.excalidraw — dimension columns highlighted green)

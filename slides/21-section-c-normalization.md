@@ -3,15 +3,17 @@ layout: center
 class: text-center
 ---
 
-# Normalization is surgery — not demolition
+# Normalization can be used to to stitch entities
+Two levels are fine for OLAP.
 
-- **1NF**: one atomic value per column; no duplicate rows
-- **2NF**: every non-key attribute depends on the *entire* PK
-- Practical move: replace composite keys with a **surrogate key**
+**1NF**: one atomic value per column; no duplicate rows
 
-Protection from insertion and deletion anomalies.
+**2NF**: every non-key attribute depends on the *entire* PK
 
-*Your dissection map tells you exactly where to cut.*
+`->` *Practical move*: replace composite keys with a **surrogate key**
+
+These steps guarantee protection from **insertion** and **deletion** anomalies.
+
 
 <!--
 Normalization gets a bad reputation in analytics engineering. People think it means painful, risky table rewrites.

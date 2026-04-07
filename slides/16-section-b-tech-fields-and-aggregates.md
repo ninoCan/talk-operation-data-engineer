@@ -6,15 +6,14 @@ transition: none
 
 <img src="../assets/table-full-color.png" class="table-reveal">
 
-# Technical fields and Aggregations
+#  Aggregations & Technical fields
+<br>
 
-**Technical Fields** — metadata for operations, not meaning:
-`created_at`, `batch_id`, `_source`, `_etl_version`, `is_deleted`
+**Aggregations**: integrate measures over time grains. EG. `mean()`, `average()`, `window()`
 
-**Aggregations** — pre-computed summaries embedded in the table:
-`total_revenue_ytd`, `avg_order_value_30d`
+**Technical Fields**: metadata or used for operations. EG. `created_at`, `batch_id`, `source`, `is_deleted`
 
-They **reduce normality** — use them deliberately.
+*These might be created by you!*
 
 <!-- TODO: Visual - HIGH PRIORITY
 Type: Excalidraw (assets/table.excalidraw — technical grey, aggregations red)

@@ -6,14 +6,14 @@ transition: none
 
 <img src="../assets/table-time-grains.png" class="table-reveal">
 
-# Facts capture *what happened*; temporal captures *when*
+# Measures: *what happened*; Temporal Grains: *when*
+<br>
 
-**Facts / Measures** — point-in-time numeric metrics:
-`revenue`, `quantity_sold`, `session_duration`
+**Measures/Facts**: point-in-time numeric metrics (`revenue`, `quantity_sold`, `session_duration`, ...)
 
-**Temporal** — the time grain of the row:
-- 1NF: one unique granularity per row
-- OLAP: multiple grains possible (weekly · monthly · quarterly)
+**Temporal**: the time grain of the row (`sold_at`, `processing_time`, `year`, ...)
+
+In OLAP: multiple grains possible (weekly, monthly, quarterly, ...)
 
 <!-- TODO: Visual - HIGH PRIORITY
 Type: Excalidraw (assets/table.excalidraw — facts orange, temporal purple)

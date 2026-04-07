@@ -14,7 +14,7 @@ This is the anchor visual — the full reveal of the dissection framework.
 Make it large, clear, readable from the back of the room.
 -->
 
-*Same table. Now you can read it!*
+*Same table, different light. Now you can read it!*
 
 <!--
 Here it is. The same table we showed at the beginning.
