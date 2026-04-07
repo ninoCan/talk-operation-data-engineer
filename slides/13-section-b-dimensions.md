@@ -1,9 +1,10 @@
 ---
 layout: center
 class: text-center
+transition: none
 ---
 
-<img src="../assets/table-dimensions.png">
+<img src="../assets/table-dimensions.png" class="table-reveal">
 
 # Dimensions describe the state of an entity over time
 

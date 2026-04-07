@@ -1,8 +1,11 @@
 ---
 layout: center
 class: text-center
+transition: none
 ---
 
+
+<img src="../assets/table-gray.png" class="table-reveal">
 
 # Every column plays a role — most schemas ignore this
 
@@ -17,8 +20,6 @@ class: text-center
 | Technical | ⚫ grey | Operational metadata |
 | Aggregations | 🔴 red | Pre-computed summaries |
 -->
-
-<img src="../assets/table-gray.png">
 
 <!-- TODO: Visual - HIGH PRIORITY
 Type: Excalidraw (assets/table.excalidraw — raw state, undifferentiated)

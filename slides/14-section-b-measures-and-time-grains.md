@@ -1,9 +1,10 @@
 ---
 layout: center
 class: text-center
+transition: none
 ---
 
-<img src="../assets/table-time-grains.png"> 
+<img src="../assets/table-time-grains.png" class="table-reveal">
 
 # Facts capture *what happened*; temporal captures *when*
 

@@ -1,4 +1,6 @@
 ---
+class: text-center
+---
 
 # Tables promise simplicity — and then complexity leaks through
 

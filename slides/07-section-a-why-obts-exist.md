@@ -1,3 +1,8 @@
+---
+layout: center
+class: text-center
+---
+
 # One table, many entities — the root of the confusion
 
 OBTs in 1NF often mix **multiple entities** in every row.

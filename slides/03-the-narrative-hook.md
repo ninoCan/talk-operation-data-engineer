@@ -2,7 +2,7 @@
 class: text-center
 ---
 
-# The assignment arrives on a Monday
+# An assignment comes in ...
 
 > "The business team wants to be able to see the history and drill-down to the details...""
 

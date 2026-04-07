@@ -1,4 +1,6 @@
 ---
+class: text-center
+---
 
 # OBTs are the destination — not the starting point
 

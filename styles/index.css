@@ -1,8 +1,63 @@
 /* Apply the Agilelab slide template to all non-cover slides */
 .slidev-layout:not(.slidev-layout-cover) {
   background-image: url('../assets/background.png');
+  background-color: #ece8e1;
+  background-blend-mode: multiply;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   color: #222120;
+}
+
+.slidev-layout:not(.slidev-layout-cover) h1,
+.slidev-layout:not(.slidev-layout-cover) h2,
+.slidev-layout:not(.slidev-layout-cover) h3,
+.slidev-layout:not(.slidev-layout-cover) h4,
+.slidev-layout:not(.slidev-layout-cover) h5,
+.slidev-layout:not(.slidev-layout-cover) h6 {
+  color: ##03a9f4; /* Agile Lab blue */
+  /* color: #00bcd4; */
+  /* color: #497b99; */
+}
+
+.slidev-layout:not(.slidev-layout-cover) blockquote {
+  /* color: #b36622; */ /* Amber */
+  color: #9b3b26; /* Rust red */
+  background-color: #b0aa9f;
+}
+
+.slidev-layout.center img {
+  max-height: 25vh;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.table-reveal {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 22vh;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.slidev-layout.center:has(.table-reveal) {
+  padding-top: 32vh;
+}
+
+.big-emoji {
+  font-size: 3rem;
+}
+
+.code-left pre, .code-left code {
+  text-align: left;
+}
+
+.slidev-layout:not(.slidev-layout-cover) :not(pre) > code {
+  background-color: #d4cfc8;
+  color: #222120;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
 }

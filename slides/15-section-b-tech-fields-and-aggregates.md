@@ -1,11 +1,12 @@
 ---
 layout: center
 class: text-center
+transition: none
 ---
 
-<img src="../assets/table-full-color.png">
+<img src="../assets/table-full-color.png" class="table-reveal">
 
-# Technical fields and aggregations are not business data
+# Technical fields and Aggregations
 
 **Technical Fields** — metadata for operations, not meaning:
 `created_at`, `batch_id`, `_source`, `_etl_version`, `is_deleted`

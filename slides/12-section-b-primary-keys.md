@@ -1,9 +1,10 @@
 ---
 layout: center
 class: text-center
+transition: none
 ---
 
-<img src="../assets/table-principal-keys.png"> 
+<img src="../assets/table-principal-keys.png" class="table-reveal">
 
 # Keys define the identity and shape of your data
 

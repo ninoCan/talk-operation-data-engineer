@@ -6,18 +6,16 @@ class: text-center
 # Why?
 
 <v-click>
-  <pre>
-  🚅  Dashboards load fast
-  </pre>
+  <pre>  <span class="big-emoji">🚅</span>  Dashboards load fast</pre>
 </v-click>
 
 <v-click>
-  <pre>🔗  No JOINs required</pre>
+  <pre><span class="big-emoji">🛠</span>  No JOINs required</pre>
 </v-click>
 <br>
 
 <v-click>
-  <pre>🤠 Stakeholders happy</pre>
+  <pre><span class="big-emoji">🤠</span> Stakeholders happy</pre>
 </v-click>
 <br>
 

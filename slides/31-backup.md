@@ -4,6 +4,8 @@ layout: default
 
 # UNION BRIDGE in PySpark
 
+<div class="code-left">
+
 ```python
 from pyspark.sql import functions as F
 
@@ -22,6 +24,8 @@ result = (
     .join(customers, "customer_id", "left")
 )
 ```
+
+</div>
 
 No row explosion. No directionality loss. FAN/CHASM/LOOP safe.
 

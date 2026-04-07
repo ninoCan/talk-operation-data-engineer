@@ -1,11 +1,9 @@
-
 ---
 layout: center
 class: text-center
 ---
 
-# Fan and Chasm traps silently corrupt your aggregations
-
+# Chasm traps explode quadratically
 
 **CHASM TRAP** — rows vanish on both sides:
 

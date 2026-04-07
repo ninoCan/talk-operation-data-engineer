@@ -1,8 +1,9 @@
 ---
 layout: center
+transition: none
 ---
 
-<img src="../assets/table-full-color.png">
+<img src="../assets/table-full-color.png" class="table-reveal">
 
 # The hidden schema was there all along
 
