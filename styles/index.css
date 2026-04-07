@@ -1,0 +1,8 @@
+/* Apply the Agilelab slide template to all non-cover slides */
+.slidev-layout:not(.slidev-layout-cover) {
+  background-image: url('../assets/background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #222120;
+}
