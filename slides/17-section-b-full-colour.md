@@ -5,7 +5,7 @@ transition: none
 
 <img src="../assets/table-full-color.png" class="table-reveal">
 
-# The hidden schema was there all along
+# This hidden structure was there all along
 
 <!-- TODO: Visual - HIGH PRIORITY
 Type: Excalidraw (assets/table.excalidraw — FULLY color-coded)
@@ -14,7 +14,7 @@ This is the anchor visual — the full reveal of the dissection framework.
 Make it large, clear, readable from the back of the room.
 -->
 
-*Same table. Now you can read it.*
+*Same table. Now you can read it!*
 
 <!--
 Here it is. The same table we showed at the beginning.

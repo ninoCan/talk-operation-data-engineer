@@ -3,15 +3,28 @@ layout: center
 class: text-center
 ---
 
-# One table, many entities — the root of the confusion
+# One table, many entities: a recipe for the confusion
 
-OBTs in 1NF often mix **multiple entities** in every row.
+OBTs often mix **multiple entities** in every row.
 
-- Horizontal redundancy is acceptable
-- Denormalization can **hide** data
-- And silently **generate duplicates**
+<v-click>
+
+Horizontal redundancy is acceptable
+
+</v-click>
+<v-click>
+
+Denormalization silently **generate duplicates**
+
+</v-click>
+
+<v-click>
+
+And can **lose** data
+
 
 *The table isn't wrong. It's opaque.*
+</v-click>
 
 <!--
 Let's start with the fundamentals. A table in First Normal Form — 1NF — simply means each column holds one atomic value and there are no duplicate rows. That's it. That's the only constraint.

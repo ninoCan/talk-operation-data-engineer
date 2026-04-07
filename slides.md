@@ -42,113 +42,117 @@ src: ./slides/03-the-narrative-hook.md
 ---
 
 ---
-src: ./slides/04-the-pain.md
+src: ./slides/04-OBT-audience-question.md
 ---
 
 ---
-src: ./slides/05-reasons.md
+src: ./slides/05-the-pain.md
 ---
 
 ---
-src: ./slides/06-dont-panic.md
+src: ./slides/06-reasons.md
 ---
 
 ---
-src: ./slides/07-section-a-why-obts-exist.md
+src: ./slides/07-dont-panic.md
 ---
 
 ---
-src: ./slides/08-section-a-leaky-abstraction.md
+src: ./slides/08-section-a-why-obts-exist.md
 ---
 
 ---
-src: ./slides/09-section-a-the-data-journey.md
+src: ./slides/09-section-a-leaky-abstraction.md
 ---
 
 ---
-src: ./slides/10-section-b-the-dissection.md
+src: ./slides/10-section-a-the-data-journey.md
 ---
 
 ---
-src: ./slides/11-section-b-the-gray-table.md
+src: ./slides/11-section-b-the-dissection.md
 ---
 
 ---
-src: ./slides/12-section-b-primary-keys.md
+src: ./slides/12-section-b-the-gray-table.md
 ---
 
 ---
-src: ./slides/13-section-b-dimensions.md
+src: ./slides/13-section-b-primary-keys.md
 ---
 
 ---
-src: ./slides/14-section-b-measures-and-time-grains.md
+src: ./slides/14-section-b-dimensions.md
 ---
 
 ---
-src: ./slides/15-section-b-tech-fields-and-aggregates.md
+src: ./slides/15-section-b-measures-and-time-grains.md
 ---
 
 ---
-src: ./slides/16-section-b-full-colour.md
+src: ./slides/16-section-b-tech-fields-and-aggregates.md
 ---
 
 ---
-src: ./slides/17-section-c-now-what.md
+src: ./slides/17-section-b-full-colour.md
 ---
 
 ---
-src: ./slides/18-section-c-action-plan.md
+src: ./slides/18-section-c-now-what.md
 ---
 
 ---
-src: ./slides/19-section-c-ERDs-graph.md
+src: ./slides/19-section-c-action-plan.md
 ---
 
 ---
-src: ./slides/20-section-c-normalization.md
+src: ./slides/20-section-c-ERDs-graph.md
 ---
 
 ---
-src: ./slides/21-section-c-dimensional-modelling.md
+src: ./slides/21-section-c-normalization.md
 ---
 
 ---
-src: ./slides/22-section-c-cardinalities.md
+src: ./slides/22-section-c-dimensional-modelling.md
 ---
 
 ---
-src: ./slides/23-section-d-and-now-join.md
+src: ./slides/23-section-c-cardinalities.md
 ---
 
 ---
-src: ./slides/24-section-d-damn-joins.md
+src: ./slides/24-section-d-and-now-join.md
 ---
 
 ---
-src: ./slides/25-section-d-fan-trap.md
+src: ./slides/25-section-d-damn-joins.md
 ---
 
 ---
-src: ./slides/26-section-d-chasm-trap.md
+src: ./slides/26-section-d-fan-trap.md
 ---
 
 ---
-src: ./slides/27-section-d-loops.md
+src: ./slides/27-section-d-chasm-trap.md
 ---
 
 ---
-src: ./slides/28-section-d-union-bridges.md
+src: ./slides/28-section-d-loops.md
 ---
 
 ---
-src: ./slides/29-morale.md
+src: ./slides/29-section-d-union-bridges.md
 ---
 
 ---
-src: ./slides/30-closing.md
+src: ./slides/30-morale.md
 ---
 
 ---
-src: ./slides/31-backup.md
+src: ./slides/31-closing.md
+---
+
+---
+src: ./slides/32-backup.md
 ---

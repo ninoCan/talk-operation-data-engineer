@@ -7,7 +7,7 @@ transition: none
 
 <img src="../assets/table-gray.png" class="table-reveal">
 
-# Every column plays a role — most schemas ignore this
+# Every column plays a role... most schemas ignore this
 
 <!-- TODO add later Six functional roles in every OBT:
 

@@ -2,9 +2,10 @@
 class: text-center
 ---
 
-# Tables promise simplicity — and then complexity leaks through
+# Tables are Leaky Abstractions
+## Tables promise simplicity... yet, complexity leaks through
 
-Designed to hide structure, they transfer it instead:
+Designed to expose patterns, they hide structure
 
 - **Indices** to design and maintain
 - **Query patterns** to optimize
