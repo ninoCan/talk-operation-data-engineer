@@ -9,9 +9,9 @@ class: text-center
 
 <br/>
 
-**Nino** — [github.com/your-handle](https://github.com/)
+**Nino** — [@ninoCan](https://github.com/ninoCan)
 
-*Slides & resources: [link]*
+*Slides & resources: [github](https://github.com/ninoCan/talk-operation-data-engineer)*
 
 <!--
 That's the talk. Thank you.

@@ -13,7 +13,7 @@ UNION ALL → rows stacked underneath (preserves direction)
 1. Build a **bridge table** with `UNION ALL`
 2. JOIN other tables to the bridge — not to each other
 
-Solves **FAN TRAP** · **CHASM TRAP** · **LOOPS**
+Solves **FAN TRAP** · **CHASM TRAP** · **LOOPS** *(ask me about them during QA* 😉 )
 
 <!-- TODO: Visual - HIGH PRIORITY
 Type: Excalidraw — side-by-side comparison of JOIN result vs UNION BRIDGE result
