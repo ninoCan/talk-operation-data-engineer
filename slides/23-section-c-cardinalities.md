@@ -10,9 +10,9 @@ class: text-center
   <img src="../assets/cardinalities.png" style="mix-blend-mode: multiply;">
 </div>
 
-### M-N relationship are not well-behaved in the relational model:
+### M-N relationship are not well-behaved in the relational model
 
-**Association Table/Bridge** contains PK & FK forming a composite key `->` can surrogate
+**Association Table/Bridge** contains PK & FK forming a composite key → can surrogate
 
 <!--
 Cardinality tells you how entities relate.

@@ -5,13 +5,7 @@ class: text-center
 
 # Pick up your scalpel
 
-*Next time you open an OBT — don't scroll in despair.*
-
-<br/>
-
-**Nino** — [@ninoCan](https://github.com/ninoCan)
-
-*Slides & resources: [github](https://github.com/ninoCan/talk-operation-data-engineer)*
+*Next time you open an OBT, don't scroll in despair.*
 
 <!--
 That's the talk. Thank you.

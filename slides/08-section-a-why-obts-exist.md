@@ -14,13 +14,13 @@ Horizontal redundancy is acceptable
 </v-click>
 <v-click>
 
-Denormalization silently **generate duplicates**
+Denormalization can silently **generate duplicates**...
 
 </v-click>
 
 <v-click>
 
-And can **lose** data
+...or can facilitate **data loss**
 
 
 *The table isn't wrong. It's opaque.*

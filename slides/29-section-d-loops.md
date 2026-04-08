@@ -7,9 +7,13 @@ class: text-center
 
 Given **n tables**: at most **n − 1 relationships** without forming a loop.
 
+<div ml-40 style="text-align: left;">
+
 Extra relations create **ambiguous JOIN paths**:
 - SQL engines choose a path — you might not like which one
 - Often introduced silently when building OBTs with n+1 relations
+
+</div>
 
 *Map the full graph before you JOIN.*
 

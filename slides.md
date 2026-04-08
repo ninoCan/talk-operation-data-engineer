@@ -30,7 +30,7 @@ duration: 20min
 ## Operation Data Engineer
 
 <div class="pt-4 text-gray-400">
-PyCon LT · 09 April 2026
+🐍 PyCon LT 🇱🇹 · 09 April 2026
 </div>
 
 ---

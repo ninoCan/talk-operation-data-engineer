@@ -1,14 +1,39 @@
 ---
-layout: default
+layout: two-cols-header
 ---
 
-# Big Data engineer @ Agile Lab
+<h1 mt-15>Big Data engineer @ Agile Lab</h1>
 
-I build pipelines in **PySpark**, **pandas**, and **polars**.
+Building data systems
 
-In that world, **OBTs are unavoidable**.
+::left::
+
+<div>
+
+Core areas:
+<ul>
+  <li>Data</li>
+  <li>Backend</li>
+  <li>Platform</li>
+  <li>Software</li>
+  <li>Frontend</li>
+</ul>
+
+</div>
+
+For data pipelines **Spark**, **Pandas**, and **Polars**.
 
 *This talk is what I wish someone had told me earlier.*
+
+::right::
+
+<h4 ml-5 style="margin-top: -35px">This talk is loosely based on the book:</h4>
+
+<img ml-15
+style="scale:100%; clip-path: inset(10px 0 45px 0);"
+src="https://technicspub.com/wp-content/uploads/2023/07/rsz_9781634628877.png">
+
+
 
 <!--
 Good morning, PyCon Lithuania. I'm Nino, a data engineer.

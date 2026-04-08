@@ -8,23 +8,18 @@ class: text-center
 <v-click>
 
 > "The business team wants to be able to see trends..."
-
-<br>
-
 </v-click>
 <v-click>
 
 > "...they want to see the all history..."
 
 </v-click>
-<br>
 
 <v-click>
 
 > "...and drill-down to the details..."
 
 </v-click>
-<br>
 
 <v-click>
 

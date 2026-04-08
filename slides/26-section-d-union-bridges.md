@@ -3,15 +3,20 @@ layout: center
 class: text-center
 ---
 
-# UNION BRIDGES solve what JOINs cannot
+# UNION BRIDGES
+Solve what JOINs cannot
 
-JOIN → columns side-by-side (loses direction)
+JOIN → entities side-by-side (loses directionality)
 
-UNION ALL → rows stacked underneath (preserves direction)
+UNION → stacked underneath (preserves direction)
+
+<div style="text-align: left">
 
 **The pattern**:
 1. Build a **bridge table** with `UNION ALL`
 2. JOIN other tables to the bridge — not to each other
+
+</div>
 
 Solves **FAN TRAP** · **CHASM TRAP** · **LOOPS** *(ask me about them during QA* 😉 )
 
