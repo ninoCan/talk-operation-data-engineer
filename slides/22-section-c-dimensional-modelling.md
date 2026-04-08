@@ -37,13 +37,13 @@ graph LR
 ```
 
 
-<div style="text-align: left">
+<div ml-10 style="text-align: left">
 
 ### **Fact tables**: describe events, collect measures
 
 ### **Dimension tables**: describe actors
 
-- When connected to a fact table, they ought to be *stable*
+- When connected to a fact table, ought to be *stable*. If not, attach **satellite dimensions** → Snowflake
 
 - When shared across multiple fact tables, they are called **conformed**
 </div>

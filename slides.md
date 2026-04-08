@@ -30,7 +30,9 @@ duration: 20min
 ## Operation Data Engineer
 
 <div class="pt-4 text-gray-400">
-🐍 PyCon LT 🇱🇹 · 09 April 2026
+<logos-python
+    style="font-size: 1.1em;"
+/> PyCon LT <span style="font-size: 1.4em;">🇱🇹</span> · 09 April 2026
 </div>
 
 ---
@@ -142,11 +144,15 @@ src: ./slides/31-closing.md
 ---
 
 ---
+src: ./slides/32-thanks.md
+---
+
+---
 src: ./slides/27-section-d-fan-trap.md
 ---
 
 ---
-src: ./slides/28-section-d-chasm-trap.md
+srce ./slides/28-section-d-chasm-trap.md
 ---
 
 ---

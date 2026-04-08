@@ -35,3 +35,4 @@ class: text-center
 Let me set a scene. It's Monday morning. Your stakeholder pings you — they need a new report by Friday.
 "Just build a One Big Table," they say. "Denormalize everything, make it fast. The BI tool will handle the rest."
 -->
+

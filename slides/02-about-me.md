@@ -10,9 +10,9 @@ Building data systems
 
 <div>
 
-Core areas:
+Hello there, I'm Nino 🇮🇹 🇫🇮
 <ul>
-  <li>Data</li>
+  <li>Data Eng</li>
   <li>Backend</li>
   <li>Platform</li>
   <li>Software</li>
@@ -21,7 +21,7 @@ Core areas:
 
 </div>
 
-For data pipelines **Spark**, **Pandas**, and **Polars**.
+For data pipelines **pySpark**, **Pandas**, and **Polars**.
 
 *This talk is what I wish someone had told me earlier.*
 

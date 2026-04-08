@@ -1,9 +1,13 @@
 ---
-layout: center
+layout: two-cols-header
 class: text-center
 ---
 
+::default::
+
 # UNION BRIDGES
+
+::left::
 Solve what JOINs cannot
 
 JOIN → entities side-by-side (loses directionality)
@@ -18,7 +22,16 @@ UNION → stacked underneath (preserves direction)
 
 </div>
 
-Solves **FAN TRAP** · **CHASM TRAP** · **LOOPS** *(ask me about them during QA* 😉 )
+Solves **FAN TRAP** · **CHASM TRAP** · **LOOPS**
+
+ *ask me about them during QA* 😉
+
+::right::
+
+
+<div style="height: 30vh; overflow: hidden; display: flex; justify-content: center;">
+  <img src="../assets/union-bridge.png" style="mix-blend-mode: multiply;">
+</div>
 
 <!-- TODO: Visual - HIGH PRIORITY
 Type: Excalidraw — side-by-side comparison of JOIN result vs UNION BRIDGE result
