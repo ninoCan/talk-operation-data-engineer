@@ -8,7 +8,7 @@ class: text-center
 ```mermaid
 flowchart LR
     A["OLTP normalized"] --> B["Dimensional Modeling"]
-    B --> C["OLAP\naggregated"]
+    B --> C["OLAP aggregated"]
     style A fill:#d39235,color:#fff,font-weight:bold
     style B fill:#b36622,color:#fff,font-weight:bold
     style C fill:#6e848c,color:#fff,font-weight:bold

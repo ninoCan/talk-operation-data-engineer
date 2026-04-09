@@ -9,7 +9,7 @@ transition: none
 #  Aggregations & Technical fields
 <br>
 
-**Aggregations**: integrate measures over time grains. EG. `mean()`, `average()`, `window()`
+**Aggregations**: integrate measures over time grains. EG. `mean()`, `sum()`, `window()`
 
 **Technical Fields**: metadata or used for operations. EG. `created_at`, `batch_id`, `source`, `is_deleted`
 

@@ -9,7 +9,7 @@ class: text-center
 
 # ERDs define the ontology of your data
 
-**PK → FK** defines directionality of who owns the relationship
+**FK → PK** defines directionality of who owns the relationship
 
 <!--
 Entity-Relationship Diagrams are more than technical documentation — they're the ontology of your data.

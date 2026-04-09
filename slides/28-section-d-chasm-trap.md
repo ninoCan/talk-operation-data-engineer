@@ -11,7 +11,7 @@ class: text-center
   <img src="../assets/chasm-trap.png" style="mix-blend-mode: multiply;">
 </div>
 
-- the wrong join generates `#(SKILLS) * #(JOBS)` rows → **Quadratic**
+- wrong join generates `#(SKILLS) * #(JOBS)` rows → **Quadratic**
 
 - with union we have `#(SKILLS) + #(JOBS)` rows → **Linear**
 
