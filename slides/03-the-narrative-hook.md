@@ -11,19 +11,19 @@ class: text-center
 </v-click>
 <v-click>
 
-> "...they want to see the all history..."
+> ...they want to see the all history...
 
 </v-click>
 
 <v-click>
 
-> "...and drill-down to the details..."
+> ...and drill-down to the details...
 
 </v-click>
 
 <v-click>
 
-> "We need a dashboard. Build a **One Big Table**."
+> We need a dashboard. Build a **One Big Table**."
 
 </v-click>
 

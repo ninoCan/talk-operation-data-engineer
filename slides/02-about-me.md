@@ -10,7 +10,7 @@ Building data systems
 
 <div>
 
-Hello there, I'm Nino 🇮🇹 🇫🇮
+Hello there, I'm **Nino** 🇮🇹 🇫🇮
 <ul>
   <li>Data Eng</li>
   <li>Backend</li>

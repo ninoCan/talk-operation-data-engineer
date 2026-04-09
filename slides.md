@@ -18,11 +18,12 @@ class: text-center
 drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
-transition: slide-left
+transition: none
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 # duration of the presentation
-duration: 20min
+duration: 25min
+timer: countdown
 ---
 
 # Master the Art of Schema Dissection
@@ -136,6 +137,18 @@ src: ./slides/26-section-d-union-bridges.md
 ---
 
 ---
+src: ./slides/27-section-d-fan-trap.md
+---
+
+---
+src: ./slides/28-section-d-chasm-trap.md
+---
+
+---
+src: ./slides/29-section-d-loops.md
+---
+
+---
 src: ./slides/30-morale.md
 ---
 
@@ -145,18 +158,6 @@ src: ./slides/31-closing.md
 
 ---
 src: ./slides/32-thanks.md
----
-
----
-src: ./slides/27-section-d-fan-trap.md
----
-
----
-srce ./slides/28-section-d-chasm-trap.md
----
-
----
-src: ./slides/29-section-d-loops.md
 ---
 
 ---

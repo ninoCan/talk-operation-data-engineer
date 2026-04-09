@@ -5,7 +5,7 @@ class: text-center
 
 # Chasm traps explode quadratically
 
-**CHASM TRAP** — rows vanish on both sides:
+**CHASM TRAP**: joining multiple satellite dimensions explodes rows
 
 <div style="height: 30vh;overflow: hidden; display: flex; justify-content: center;">
   <img src="../assets/chasm-trap.png" style="mix-blend-mode: multiply;">

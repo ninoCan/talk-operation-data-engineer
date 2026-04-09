@@ -7,8 +7,9 @@ class: text-center
 
 # UNION BRIDGES
 
-::left::
 Solve what JOINs cannot
+
+::left::
 
 JOIN → entities side-by-side (loses directionality)
 
@@ -23,8 +24,6 @@ UNION → stacked underneath (preserves direction)
 </div>
 
 Solves **FAN TRAP** · **CHASM TRAP** · **LOOPS**
-
- *ask me about them during QA* 😉
 
 ::right::
 

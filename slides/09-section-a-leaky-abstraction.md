@@ -11,7 +11,7 @@ class: text-center
 
 <span class="big-emoji">📐</span> Naive modeling choices generate extra work later (`normalization`, `CDC`, ...)
 
-<span class="big-emoji">🤸‍</span>♀️ Extra gymnastics to optimize (`Indices`, `sharding`, ...)
+<span class="big-emoji">🤸</span>♀️ Extra gymnastics to optimize (`Indices`, `sharding`, ...)
 
 <!-- TODO: Visual - MEDIUM PRIORITY
 Type: Simple diagram — abstraction layer with arrows "leaking" through it
