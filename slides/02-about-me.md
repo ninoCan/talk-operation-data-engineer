@@ -25,6 +25,18 @@ For data pipelines **pySpark**, **Pandas**, and **Polars**.
 
 *This talk is what I wish someone had told me earlier.*
 
+<!--
+TIMING: 30 seconds
+
+Keep this short. Nobody came for the CV. The bio is a contract with the audience: here's why I'm qualified to tell you this.
+
+"I'm Nino — big data engineer at Agile Lab, a consultancy that designs and builds data systems. I work on data pipelines: PySpark, pandas, polars. This talk is loosely based on the Unified Star Schema book by Bill Inmon and Francesco Puppini — but mostly it's built from experience. It's the kind of mental model I wish someone had handed me on day zero."
+
+Don't read the bullet list on screen. Just say it conversationally, then move.
+
+TRANSITION TO NEXT: "So let me set the scene."
+-->
+
 ::right::
 
 <h4 ml-5 style="margin-top: -35px">This talk is loosely based on the book:</h4>

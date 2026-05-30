@@ -13,3 +13,19 @@ class: text-center
 *Raise your hand if you've been here.*
 
 </v-click>
+
+<!--
+TIMING: 30 seconds
+
+The image shows what an OBT actually looks like — columns, columns, more columns. No obvious structure.
+
+"Look at this. Customer name, next to product SKU, next to shipment date, next to a rolling 30-day average — all in a single row. No obvious grouping. No clear structure."
+
+Then click: "Raise your hand if you've been in this situation."
+
+Actually look at the room. Count hands. React honestly:
+- If many hands: "Good. I see you. You've lived this."
+- If few hands: "For the rest of you: I hope this becomes useful the day your manager comes knocking. And that day WILL come."
+
+TRANSITION TO NEXT: "When I got this request, here's exactly what happened inside my head."
+-->
