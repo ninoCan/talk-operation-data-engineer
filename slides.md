@@ -22,7 +22,7 @@ transition: none
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 # duration of the presentation
-duration: 25min
+duration: 30min
 timer: countdown
 ---
 
@@ -33,7 +33,7 @@ timer: countdown
 <div class="pt-4 text-gray-400">
 <logos-python
     style="font-size: 1.1em;"
-/> PyCon LT <span style="font-size: 1.4em;">🇱🇹</span> · 09 April 2026
+/> PyCon IT <span style="font-size: 1.4em;">🇮🇹</span> · 30 May 2026
 </div>
 
 ---
