@@ -20,7 +20,6 @@ My gratitude goes to
 style="scale: 40%; margin-top: -135px; margin-left: -40px; border-radius: 25px;"
 src="../assets/qr-code.png">
 
-
 ::right::
 
 <h1 style="margin-top: -50px;">We are hiring!</h1>

@@ -28,4 +28,3 @@ result = (
 No data loss. No row explosion. No directionality loss.
 
 Fan/Chasm/Loop safe.
-

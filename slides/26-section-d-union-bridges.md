@@ -27,24 +27,6 @@ Solves **FAN TRAP** · **CHASM TRAP** · **LOOPS**
 
 ::right::
 
-
 <div style="height: 30vh; overflow: hidden; display: flex; justify-content: center;">
   <img src="../assets/union-bridge.png" style="mix-blend-mode: multiply;">
 </div>
-
-<!-- TODO: Visual - HIGH PRIORITY
-Type: Excalidraw — side-by-side comparison of JOIN result vs UNION BRIDGE result
-Show: same two source tables, different approach, different row counts and structure
--->
-
-<!--
-So how do we escape the JOIN traps? UNION BRIDGES.
-Here's the key insight: JOIN and UNION ALL are fundamentally different operations.
-JOIN puts columns side by side. It creates new combinations of rows. It loses directionality.
-UNION ALL stacks rows underneath each other. It preserves every row from every source. It maintains structure.
-The UNION BRIDGE pattern builds a bridge table using UNION ALL first, then joins other tables to it — the bridge becomes your single anchor point.
-This preserves the directionality of your relationships. It's immune to the Fan Trap because you're not fanning through a join.
-It avoids the Chasm Trap because every row from every source is preserved.
-And it breaks loops because the bridge is the one stable connection point.
-It's a simple pattern. And it works.
--->

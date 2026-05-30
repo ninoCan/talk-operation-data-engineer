@@ -32,13 +32,3 @@ For data pipelines **pySpark**, **Pandas**, and **Polars**.
 <img ml-15
 style="scale:100%; clip-path: inset(10px 0 45px 0);"
 src="https://technicspub.com/wp-content/uploads/2023/07/rsz_9781634628877.png">
-
-
-
-<!--
-Good morning, PyCon Lithuania. I'm Nino, a data engineer.
-I spend most of my working hours in PySpark, pandas, and occasionally polars — the Python data stack.
-And in that world, One Big Tables are everywhere. You build them, you inherit them, you struggle with them.
-This talk is the mental framework I wish someone had handed me on day one.
-Let me show you what I mean.
--->
