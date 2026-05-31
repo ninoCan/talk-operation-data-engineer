@@ -14,7 +14,7 @@ class: text-center
 <!--
 TIMING: 40 seconds
 
-"Let's talk about ERDs — entity relationship diagrams. If you're lucky, your company has them. If not, you'll need to reverse-engineer them from the schema and the team's domain knowledge."
+"Let's talk about ERDs! If you're lucky, your company has them. If not, you'll need to reverse-engineer them from the schema and the team's domain knowledge."
 
 "What's inside an ERD is a graph. Foreign keys in one table point to primary keys in another. That's a DIRECTION, not just a link."
 

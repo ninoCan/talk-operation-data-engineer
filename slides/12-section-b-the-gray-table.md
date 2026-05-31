@@ -15,7 +15,5 @@ TIMING: 20 seconds
 
 ENERGY HOOK: "Think of this as a CAT scan of a table. The structure is there. You just need the right wavelength to see it."
 
-Let the visual sit for a moment, then move. The next four slides will color it in.
-
 TRANSITION TO NEXT: "Let's start with the most important type: principal keys."
 -->

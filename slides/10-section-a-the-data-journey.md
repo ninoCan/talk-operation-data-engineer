@@ -24,11 +24,7 @@ flowchart LR
 <!--
 TIMING: 50 seconds
 
-The OLTP → Dimensional Modeling → OLAP pipeline. Context-setting for everything that follows.
-
-Point to the Mermaid diagram as you speak.
-
-"There's a journey the data has already taken before it lands in your hands."
+"There's a journey the data has to take ..."
 
 Arrow 1 — OLTP: "It starts in an online transactional system. Tables optimized for WRITES. Nicely normalized, often one-to-one with domain objects. Think: your orders table, your users table."
 
@@ -38,5 +34,5 @@ Arrow 3 — OLAP: "Finally it lands in the realm of online analytical processes.
 
 "OBTs are the DESTINATION. They're the end of the journey, not the beginning. Your job is to make sure the journey to get there is sound."
 
-TRANSITION TO NEXT: "Alright. Let's get down to business. Section B: the dissection."
+TRANSITION TO NEXT: "Alright. Let's get down to business."
 -->

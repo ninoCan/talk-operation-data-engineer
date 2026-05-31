@@ -14,5 +14,5 @@ Just a beat. Let it breathe.
 
 Optional ad-lib: "This is not a Douglas Adams reference. Or... maybe it is."
 
-Move immediately after. The humor works because it's brief.
+👀 "Who got the reference?"
 -->

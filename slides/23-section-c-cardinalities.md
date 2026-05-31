@@ -18,17 +18,15 @@ TIMING: 50 seconds
 
 ENERGY HOOK: "Cardinalities. The step everyone skips. Don't be everyone."
 
-"One-to-one: wonderfully clean. One country, one capital. No ambiguity."
+"1:1 wonderfully clean. One country, one capital. No ambiguity."
 
-"One-to-many: generally fine, with a few edge cases we'll get to in the next section."
+"1:M generally fine, with a few edge cases"
 
-"Many-to-many: this is where things get troublesome."
+"M:N this is where things get troublesome."
+
+HUMOR: "Many-to-many: the relationship status that even databases find complicated."
 
 "Think of citizens and countries. A citizen can hold multiple nationalities. A country has many citizens. If you naively join these, you get a mess."
 
 "The solution: introduce a bridge table — also called an association table — that breaks the many-to-many into a chain of one-to-many relationships. Think of the passport: it gives each citizen a well-defined nationality in a specific context. The bridge table is built by stitching together the primary and foreign keys of both original tables into a new one — and you can surrogate that composite key."
-
-HUMOR: "Many-to-many: the relationship status that even databases find complicated."
-
-TRANSITION TO NEXT: "Alright. We've dissected, modeled, analyzed. Now we join."
 -->

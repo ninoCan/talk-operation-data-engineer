@@ -34,22 +34,14 @@ class: text-center
 <!--
 TIMING: 50 seconds
 
-Build the story beat by beat. Each v-click is a new beat — pause after each one.
+Picture this. You come back from your holidays. The previous project is wrapped up. You're feeling good. And then your manager pulls you aside."
 
-"Picture this. You come back from your holidays. The previous project is wrapped up. You're feeling good. And then your manager pulls you aside."
+The business team wants to see trends in the data
 
-Click 1 — "The business team wants to see trends in the data."
-Pause. Let the dread land.
+They want the full record history.
 
-Click 2 — "They want the full record history."
-Pause again.
+And drill-down to weekly, monthly, quarterly reports.
 
-Click 3 — "And drill-down to weekly, monthly, quarterly reports."
-[one more beat]
-
-Click 4 — "We need a dashboard. Build a One Big Table."
-
-Say "One Big Table" slowly and with weight. This phrase will echo through the whole talk. It sets the stakes.
-
-TRANSITION TO NEXT: Walk to the slide as if approaching the scene of an accident.
+We need a dashboard. 
+YOU have to build a One Big Table
 -->

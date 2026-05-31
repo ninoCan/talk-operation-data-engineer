@@ -44,3 +44,14 @@ TRANSITION TO NEXT: "So let me set the scene."
 <img ml-15
 style="scale:100%; clip-path: inset(10px 0 45px 0);"
 src="https://technicspub.com/wp-content/uploads/2023/07/rsz_9781634628877.png">
+
+<!--
+AgileLab -> a consultancy firm; we design and build data systems.
+In this company I get to wear many different hats.
+For my data pipeline work I've used mostly PySpark, pandas, and polars.
+
+This talk is loosely based on the book by Bill Inmon and Francesco Puppini, "The Unified Star Schema"; it applies to all three frameworks.
+
+This is something I built up through experience.
+It's the kind of mental framework I wish someone had handed me on day zero.
+-->

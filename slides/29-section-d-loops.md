@@ -38,3 +38,9 @@ TRANSITION TO NEXT: "Let's wrap this up."
 -->
 
 </div>
+
+<!--
+And the last trap is sneaky because it looks like it should just work.
+
+N tables support AT most N-1 relationships in joins.
+-->

@@ -10,11 +10,11 @@ class: text-center
 <!--
 TIMING: 5 seconds
 
+"Alright. We've dissected, modeled, analyzed. Now we join."
+
 Pause. A slight sigh, or a resigned smile.
 
 "And then... we join."
 [beat]
 "Things go south."
-
-Deadpan delivery. Let the audience laugh before clicking to the next slide. This is a well-earned laugh — they know joins are tricky. Lean into it.
 -->

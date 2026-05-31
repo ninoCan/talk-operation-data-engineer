@@ -20,7 +20,7 @@ TIMING: 50 seconds
 
 "The fan trap. Probably the most common silent bug in denormalized table pipelines."
 
-"Whenever you have a one-to-many cardinality and measures are involved, joining can silently duplicate rows. Run a SUM or AVERAGE over those duplicates... and you get the wrong number. Every time. No error, no warning — just a wrong number that looks plausible."
+"Whenever you have a 1:M cardinality and measures are involved, joining can silently duplicate rows. Run a SUM or AVERAGE over those duplicates... and you get the wrong number. Every time. No error, no warning — just a wrong number that looks plausible."
 
 "Here's the mnemonic: look at the diagram. See that crowfoot-style ending on the relationship line? It looks like a fan — the kind your grandma used to keep cool in summer. Many spokes, many duplicates."
 

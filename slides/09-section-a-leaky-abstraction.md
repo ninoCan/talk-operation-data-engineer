@@ -15,9 +15,6 @@ class: text-center
 
 <!--
 TIMING: 50 seconds
-
-The leaky abstraction concept — make it tangible before showing the bullets.
-
 "You've probably heard the term 'leaky abstraction'. The idea is that a system promises to hide complexity, but the complexity leaks through at the worst possible moment."
 
 "An OBT hides something specific: it encodes multiple entity relationships inside a flat structure, with no trace of those decisions in the schema itself."

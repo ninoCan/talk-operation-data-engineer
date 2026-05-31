@@ -27,6 +27,4 @@ TIMING: 50 seconds
 "With union bridges, each row appears exactly once. At most n + m rows. LINEAR growth."
 
 "At small scale this is invisible. At large scale — millions of users, dozens of skills, dozens of jobs — you've just created a table that explodes your compute budget and corrupts your aggregations. The joins looked correct. The numbers looked plausible. The table was wrong."
-
-TRANSITION TO NEXT: "And the last trap is sneaky because it looks like it should just work."
 -->

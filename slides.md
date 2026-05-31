@@ -39,11 +39,9 @@ timer: countdown
 <!--
 TIMING: 15 seconds
 
-It's 11:45 — people have been at the conference for a couple of hours. Still caffeinated, lunch is a smell away. The sweet spot. Use it.
+Thank you for being here!
 
-Open with something like: "Today I want to show you a new way of seeing a data structure you've almost certainly already encountered. Welcome to the art of schema dissection: Operation Data Engineer."
-
-Wait for the room to settle. Hold eye contact. Let the title land before you move.
+Today I want to show you a new way of seeing a data structure you've almost certainly already encountered. Welcome to the art of schema dissection: Operation Data Engineer.
 -->
 
 ---
